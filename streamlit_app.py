@@ -18,8 +18,9 @@ fruits_to_show = my_fruit_list.loc[fruits_selected]
 
 st.dataframe(fruits_to_show)
 
-fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
-st.text(fruityvice_response.json())
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + "kiwi")
+# st.text(fruityvice_response.json()) removed this raw json line
+
 st.header("Fruityvice Fruit Advice!")
 # json data is converted into table using pandas 
 fruityvice_normalized = pd.json_normalize(fruityvice_response.json())
