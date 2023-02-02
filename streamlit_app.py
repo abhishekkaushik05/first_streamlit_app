@@ -26,3 +26,6 @@ st.header("Fruityvice Fruit Advice!")
 fruityvice_normalized = pd.json_normalize(fruityvice_response.json())
 # display the tabular data on screen
 st.dataframe(fruityvice_normalized)
+
+fruit_choice = st.text_input('What fruit would you like information about?','Kiwi')
+st.write('The user entered ', fruit_choice)
