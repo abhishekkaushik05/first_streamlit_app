@@ -33,7 +33,7 @@ st.dataframe(fruityvice_normalized)
 
 my_cnx = snowflake.connector.connect(**st.secrets["snowflake"])
 my_cur = my_cnx.cursor()
-my_cur.execute("SELECT * FROM FDC_FOOD_INGEST")
+my_cur.execute("SELECT DESCRIPTION FROM FDC_FOOD_INGEST")
 my_data_row = my_cur.fetchall()
 st.header("The table contains:")
 st.dataframe(my_data_row)
