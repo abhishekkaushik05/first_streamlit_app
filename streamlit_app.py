@@ -40,5 +40,5 @@ st.header("The table contains:")
 st.dataframe(my_data_row)
 
 fruit_add = st.text_input('What fruit would you like to add?')
-my_cur.execute(f"INSERT INTO FDC_FOOD_INGEST('DESCRIPTION') VALUES({fruit_add})")
+my_cur.execute(f"INSERT INTO FDC_FOOD_INGEST(DESCRIPTION) VALUES({fruit_add})")
 st.write(f"Thanks for adding {fruit_add}")
