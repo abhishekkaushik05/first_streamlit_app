@@ -51,5 +51,5 @@ if st.button('Get fruit load list'):
 
 fruit_add = st.text_input('What fruit would you like to add?')
 st.write(f"Thanks for adding {fruit_add}")
-my_cur.execute(f"INSERT INTO FDC_FOOD_INGEST(DESCRIPTION) VALUES ('from streamlit')")
+my_cur.execute("INSERT INTO FDC_FOOD_INGEST(DESCRIPTION) VALUES ('from streamlit')")
 
