@@ -41,7 +41,7 @@ st.header("The table contains:")
 
 def get_fruit_load_list():
    with my_cnx.cursor() as my_cur:
-      my_cur.execute("SELECT DESCRIPTION FROM FDC_FOOD_INGEST")
+      my_cur.execute("SELECT fruit_name FROM fruit_load_list")
       return my_cur.fetchall()
 
 if st.button('Get fruit load list'):
@@ -51,7 +51,7 @@ if st.button('Get fruit load list'):
 
 def insert_row_snowflake(new_fruit):
    with my_cnx.cursor() as my_cur:
-      my_cur.execute(f"INSERT INTO FDC_FOOD_INGEST(DESCRIPTION) VALUES ('{new_fruit}')")
+      my_cur.execute(f"INSERT INTO fruit_load_list(fruit_name) VALUES ('{new_fruit}')")
       return "Thanks for adding" + " " + new_fruit
 add_my_fruit= st.text_input('What fruit would you like to add?')
 if st.button('Add a fruit to the list'):
