@@ -49,10 +49,6 @@ if st.button('Get fruit load list'):
    my_data_rows = get_fruit_load_list()
    st.dataframe(my_data_rows)
 
-
-
-st.dataframe(my_data_row)
-
 fruit_add = st.text_input('What fruit would you like to add?')
 st.write(f"Thanks for adding {fruit_add}")
 my_cur.execute(f"INSERT INTO FDC_FOOD_INGEST(DESCRIPTION) VALUES ('from streamlit')")
